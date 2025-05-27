@@ -1,3 +1,13 @@
+/*PALETA
+Vermelho: #C5172E
+Branco: #FBFEF9
+Branco ativo: #C9CBC7
+Azul claro: #568EA3
+Azul acinzentado: #302F4D
+Azul menu: #120D31
+PALETA*/
+
+
 /*TUDO*/
 *{
     padding: 0px;
@@ -48,16 +58,27 @@ nav img{
     color: #c9cbc7;
     text-decoration: none;
 }
+
+/*RESPONSIVO*/
+@media (max-width: 800px) {
+    nav{
+        background-color: aqua;
+    }
+}
+/*RESPONSIVO*/
+
 /*NAVBAR*/
 
 /*FOOTER*/
 footer{
     margin-top: 10vh;
+    height: 10vh;
     background-color: #120d31;
+    color: #C9CBC7;
+    font-size: larger;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 2vh;
-    gap:12px
 }
 /*FOOTER*/
