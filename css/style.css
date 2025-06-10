@@ -41,7 +41,7 @@ nav a:hover {
     text-decoration: none;
     transition: 0.5s;
 }
-nav ul{
+.menunav{
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -54,15 +54,50 @@ nav img{
     width: 8vh;
     height: auto;
 }
+
+
+
+
+
+nav button{
+    background-color: transparent;
+    border-radius: 7.5px;
+    color: #C5172E;
+    border-color: #C5172E;
+}
+
+
+
+
+
 .menu_ativo{
     color: #c9cbc7;
     text-decoration: none;
 }
 
+.container_dropdown{
+    display: none;
+    flex-direction: column;
+}
+
 /*RESPONSIVO*/
 @media (max-width: 800px) {
     nav{
-        background-color: aqua;
+        padding: 2.5vw 8vw;
+    }
+    .menunav {
+        display: none;
+    }
+    .loginbtn {
+        display: none;
+    }
+    .container_dropdown{
+        display: flex;
+    }
+    .drop{
+        list-style: none;
+        color: #120d31;
+        /*display: none; /*faz com que suma*/
     }
 }
 /*RESPONSIVO*/
