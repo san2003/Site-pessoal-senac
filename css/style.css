@@ -1,4 +1,6 @@
 /*PALETA
+
+
 Vermelho: #C5172E
 Branco: #FBFEF9
 Branco ativo: #C9CBC7
@@ -6,6 +8,15 @@ Azul claro: #568EA3
 Azul acinzentado: #302F4D
 Azul menu: #120D31
 PALETA*/
+
+:root {
+    --cor-vermelho: #C5172E;
+    --cor-branco: #FBFEF9;
+    --cor-branco-ativo: #C9CBC7;
+    --cor-azul-claro: #568EA3;
+    --cor-azul-acinzentado: #302F4D;
+    --cor-azul-menu: #120D31;
+  }
 
 
 /*TUDO*/

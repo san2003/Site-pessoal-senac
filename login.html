@@ -3,21 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="img/logo.png" />
 </head>
 <body>
     <header>
-        <nav>
-            <img src="../Site pessoal/img/logo.jpg" alt="logo">
-            <ul>
-                <li><a href="../Site pessoal/index.html">Página inicial</a></li>
-                <li><a href="../Site pessoal/catalogo.html">Catálogo</a></li>
-                <li><a href="../Site pessoal/sobrenos.html">Sobre nós</a></li>
-            </ul>
-            <a class="menu_ativo" href="../Site pessoal/login.html">Login</a>
-        </nav>
-
     </header>
+    <section class="logineimg">
+      <div class="containerlogin">
+        <section id="login"class="">
+          <form id="logador">
+          <p id="loginerrado" class="sumir">Usuário ou senha incorretos!</p>
+            <label>Usuário:</label>
+            <input type="text" id="usuariol" placeholder="Seu usuário">
+            <label>Senha:</label>
+            <input type="password" id="senhal" placeholder="Senha">
+            <button type="submit">Login</button>
+            <a id="abrircadastro">Ainda não sou cadastrado.</a>
+            <a href="index.html"> Voltar para home.</a>
+          </form>
+        </section>
+    
+    
+        <section id="criarconta" class="sumir">
+          <form id="criadordeconta">
+            <label>Usuário:</label>
+            <input type="text" id="usuarioc" placeholder="Seu usuário">
+            <label>Nome:</label>
+            <input type="text" id="unome" placeholder="Nome">
+            <label>Email:</label>
+            <input type="email" id="uemail" placeholder="seu@gmail.com">
+            <label>Senha:</label>
+            <input type="password" id="senhac" placeholder="Senha">
+            <label>Confirmar senha:</label>
+            <input type="password" id="senhacconfirm" placeholder="Senha">
+            
+            <p id="senhaerrada" class="sumir">As senhas não coincidem</p>
+            <button type="submit">Criar uma conta</button>
+            <a id="fechacadastro">Já tenho uma conta.</a>
+            <a href="index.html"> Voltar para home.</a>
+          </form>
+        </section>
+      </div>
+      <img src="../Site-pessoal-senac-main/img/z1000.jpg" alt="">
+    </section>
+
+    <script src="js/login.js"></script>
     </body>
 </html>

@@ -1,0 +1,84 @@
+:root {
+    --cor-vermelho: #C5172E;
+    --cor-vermelhoEscurecido: #aa1428;
+    --cor-branco: #FBFEF9;
+    --cor-branco-ativo: #C9CBC7;
+    --cor-azul-claro: #568EA3;
+    --cor-azul-acinzentado: #302F4D;
+    --cor-azul-menu: #120D31;
+  }
+body{
+    background-color: var(--cor-branco);
+}
+
+.containerlogin{
+    align-content: center;
+    width: 50vw;
+    height: 100vh;
+}
+.containerlogin form{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 30vw;
+    height: 50vh;
+}
+.containerlogin input{
+    border-radius: 3px;
+    background-color: #00000010;
+    font-size: 1vw;
+    font-weight: 500;
+    border: none; /* Remove todas as bordas primeiro, se houver */
+    border-bottom: 2px solid var(--cor-azul-menu); /* Borda inferior: 2px de espessura, sólida, azul */
+    padding: 8px 0; /* Ajuste o padding conforme necessário, 0 nas laterais para a borda ficar mais "limpa" */
+    outline: none; /* Remove o contorno azul/preto que aparece ao focar no input */
+    height: 5vh;
+    width: 100%; /* Exemplo: input ocupa 100% da largura do contêiner */
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
+  }
+  .containerlogin button{
+    margin-top: 5vh;
+    height: 5vh;
+    width: 10vw;
+    font-weight: 700;
+    font-size: calc(0.7vw + 5px);
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--cor-azul-menu);
+    color: var(--cor-branco);
+  }
+  
+.containerlogin label{
+    font-size: 1.5vw;
+}
+.containerlogin a{
+    font-size:0.8vw;
+    font-weight: 600;  
+    color: var(--cor-vermelho);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+.containerlogin a:hover{
+    transition: 1500ms;
+    color: var(--cor-vermelhoEscurecido);
+}
+
+.sumir{
+    display: none;
+}
+
+.logineimg{
+    display: flex;
+    flex-direction: row;
+}
+section img{
+    width: 50vw;
+    height: 100vh;
+    
+    object-fit:cover;
+    object-position: center;
+}
