@@ -18,6 +18,15 @@ PALETA*/
     --cor-azul-menu: #120D31;
   }
 
+  @font-face {
+    font-family: 'megazine'; /* Escolha um nome para sua fonte */
+    src: 
+        url('/Site-pessoal-senac-main/megazine-poster/MegazinePosterDEMO-Regular.ttf') format('truetype'); /* Formato TTF para compatibilidade */
+    font-weight: normal; /* Ou bold, light, etc., dependendo da sua fonte */
+    font-style: normal;  /* Ou italic, oblique, etc. */
+    /* Outras propriedades opcionais: */
+    /* font-display: swap; */ /* Melhora o carregamento da fonte */
+  }
 
 /*TUDO*/
 *{

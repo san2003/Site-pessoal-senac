@@ -25,40 +25,35 @@ document.getElementById('fechacadastro').addEventListener('click', () => {
 document.getElementById('criadordeconta').addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const novoUsuario = {
-        usuario: document.getElementById("usuarioc").value,
-        nome: document.getElementById("unome").value,
-        email: document.getElementById("uemail").value,
-        senha: document.getElementById("senhac").value,
-        senhaconfirm: document.getElementById("senhacconfirm").value
-    };
-    if (novoUsuario.usuario == "") {
+    if (document.getElementById("usuarioc").value == "") {
+        document.getElementById('errosenha').classList.toggle('sumir');
         alert("Todos os campos devem ser preencidos");
         document.getElementById("usuarioc").focus();
-    }
-    else if (novoUsuario.nome == "") {
-        alert("Todos os campos devem ser preencidos");
-        document.getElementById("unome").focus();
+        console.log(document.getElementById('errosenha').className);
+        if(document.getElementById('errosenha').className =="sumir"){
+        }
+        else{
+            console.log("ok");
+            document.getElementById('errosenha').classList.toggle('sumir');
 
+        }
     }
-    else if (novoUsuario.email == "") {
-        alert("Todos os campos devem ser preencidos");
+    else if (document.getElementById("uemail") == "") {
         document.getElementById("uemail").focus();
 
     }
-    else if (novoUsuario.senha == "") {
+    else if (document.getElementById("senhac") == "") {
         alert("Todos os campos devem ser preencidos");
         document.getElementById("senhac").focus();
 
     }
-    else if (novoUsuario.senhaconfirm == "") {
-        alert("Todos os campos devem ser preencidos");
+    else if (document.getElementById("senhacconfirm") == "") {
         document.getElementById("senhacconfirm").focus();
 
     }
     else{
         //condição de senha errada
-        if (novoUsuario.senha === novoUsuario.senhaconfirm) {
+        if (document.getElementById("senhac") === document.getElementById("senhacconfirm")) {
             usuario.push(novoUsuario); //add ao usuário o perfil escrito
             alert("Cadastro realizado com sucesso!");
             
@@ -70,12 +65,6 @@ document.getElementById('criadordeconta').addEventListener("submit", (e) => {
         }
 
     }
-
-    document.getElementById('usuarioc').value = ""; //ARRUMAR
-    document.getElementById('unome').value = "";
-    document.getElementById('uemail').value = "";
-    document.getElementById('senhac').value = "";
-    document.getElementById('senhacconfirm').value = "";
 });
 
 //quando clica o botao de login
@@ -101,3 +90,12 @@ document.getElementById('logador').addEventListener("submit", (e) => {
     }
 
 })
+
+
+
+const novoUsuario = {
+    usuario: document.getElementById("usuarioc").value,
+    email: document.getElementById("uemail").value,
+    senha: document.getElementById("senhac").value,
+    senhaconfirm: document.getElementById("senhacconfirm").value
+};

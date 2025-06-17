@@ -11,7 +11,14 @@ body{
     background-color: var(--cor-branco);
 }
 
+h1{
+    margin-left: -2vw;
+    font-size: 3.5vw;
+    font-weight: 700;
+}
+
 .containerlogin{
+    background-color: var(--cor-branco);
     align-content: center;
     width: 50vw;
     height: 100vh;
@@ -20,10 +27,18 @@ body{
     display: flex;
     flex-direction: column;
     justify-self: center;
+    justify-content: center;
     width: 30vw;
-    height: 50vh;
+    height: 100vh;
+
+}
+.containerlogin label{
+    margin-left: 0.3vw;
+    margin-top: 1.5vh;
+    font-size: 1.5vw;
 }
 .containerlogin input{
+    margin-top: 3px;
     border-radius: 3px;
     background-color: #00000010;
     font-size: 1vw;
@@ -32,10 +47,11 @@ body{
     border-bottom: 2px solid var(--cor-azul-menu); /* Borda inferior: 2px de espessura, sólida, azul */
     padding: 8px 0; /* Ajuste o padding conforme necessário, 0 nas laterais para a borda ficar mais "limpa" */
     outline: none; /* Remove o contorno azul/preto que aparece ao focar no input */
-    height: 5vh;
+    height: 6vh;
     width: 100%; /* Exemplo: input ocupa 100% da largura do contêiner */
     box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
   }
+
   .containerlogin button{
     margin-top: 5vh;
     height: 5vh;
@@ -49,18 +65,25 @@ body{
     color: var(--cor-branco);
   }
   
-.containerlogin label{
-    font-size: 1.5vw;
+  .containerlogin p{
+    color: var(--cor-vermelho);
+    font-size: calc(5px + 0.7vw);
+    font-weight: 500;
 }
-.containerlogin a{
-    font-size:0.8vw;
+  .containerlogin a{
+    margin-top: 0.5vh;
+    font-size: calc(5px + 0.7vw);
+    font-weight: 500;
     font-weight: 600;  
     color: var(--cor-vermelho);
     cursor: pointer;
     text-decoration: none;
+    align-self: center;
 }
+.containerlogin p{
+    align-self: center;
 
-
+}
 
 .containerlogin a:hover{
     transition: 1500ms;
@@ -82,3 +105,4 @@ section img{
     object-fit:cover;
     object-position: center;
 }
+
