@@ -25,35 +25,35 @@ document.getElementById('fechacadastro').addEventListener('click', () => {
 document.getElementById('criadordeconta').addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (document.getElementById("usuarioc").value == "") {
-        document.getElementById('errosenha').classList.toggle('sumir');
+    const novoUsuario = {
+        usuario: document.getElementById("usuarioc").value,
+        email: document.getElementById("uemail").value,
+        senha: document.getElementById("senhac").value,
+        senhaconfirm: document.getElementById("senhacconfirm").value
+    };
+
+    if (novoUsuario.usuario == "") {
         alert("Todos os campos devem ser preencidos");
         document.getElementById("usuarioc").focus();
-        console.log(document.getElementById('errosenha').className);
-        if(document.getElementById('errosenha').className =="sumir"){
-        }
-        else{
-            console.log("ok");
-            document.getElementById('errosenha').classList.toggle('sumir');
-
-        }
     }
-    else if (document.getElementById("uemail") == "") {
+    else if (novoUsuario.email == "") {
+        alert("Todos os campos devem ser preencidos");
         document.getElementById("uemail").focus();
 
     }
-    else if (document.getElementById("senhac") == "") {
+    else if (novoUsuario.senha == "") {
         alert("Todos os campos devem ser preencidos");
         document.getElementById("senhac").focus();
 
     }
-    else if (document.getElementById("senhacconfirm") == "") {
+    else if (novoUsuario.senhaconfirm == "") {
+        alert("Todos os campos devem ser preencidos");
         document.getElementById("senhacconfirm").focus();
 
     }
     else{
         //condição de senha errada
-        if (document.getElementById("senhac") === document.getElementById("senhacconfirm")) {
+        if (novoUsuario.senha === novoUsuario.senhaconfirm) {
             usuario.push(novoUsuario); //add ao usuário o perfil escrito
             alert("Cadastro realizado com sucesso!");
             
@@ -91,11 +91,3 @@ document.getElementById('logador').addEventListener("submit", (e) => {
 
 })
 
-
-
-const novoUsuario = {
-    usuario: document.getElementById("usuarioc").value,
-    email: document.getElementById("uemail").value,
-    senha: document.getElementById("senhac").value,
-    senhaconfirm: document.getElementById("senhacconfirm").value
-};
