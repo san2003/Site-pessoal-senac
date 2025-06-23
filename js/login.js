@@ -1,92 +1,133 @@
-const usuario = [];
-//fechar parte de login e abre cadastro
-document.getElementById('abrircadastro').addEventListener('click', () => {
-    document.getElementById('login').classList.toggle('sumir')
-    document.getElementById('criarconta').classList.toggle('sumir')
+//assim que a página iniciar
+let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-    document.getElementById('usuariol').value = "";
-    document.getElementById('senhal').value = "";
-});
+const salvarUsuarios = () => {
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+}
 
-//fechar parte de cadastro e abre login
-document.getElementById('fechacadastro').addEventListener('click', () => {
-    console.log("Botão clicado")
-    document.getElementById('login').classList.toggle('sumir')
-    document.getElementById('criarconta').classList.toggle('sumir')
-    
+document.addEventListener('DOMContentLoaded', () => {
+    const usuario = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    const formLogin = document.getElementById('formLogin');
+    const formCadastro = document.getElementById('formCadastro');
+    const btncadastrar = document.getElementById('cadastrar'); //add onclicl
+    const btnlogar = document.getElementById('logar');
+
+})
+
+//funções
+function apagar(){
+    console.log("fui rodado apagar")
+    //tela login
+    document.getElementById("usuariol").value = "";
+    document.getElementById("senhal").value = "";
+    //tela cadastro
     document.getElementById('usuarioc').value = "";
-    document.getElementById('unome').value = "";
     document.getElementById('uemail').value = "";
     document.getElementById('senhac').value = "";
     document.getElementById('senhacconfirm').value = "";
+}
+
+function trocapag(){
+    console.log("fui rodado trocapag")
+    document.getElementById('login').classList.toggle('sumir');
+    document.getElementById('criarconta').classList.toggle('sumir');
+    apagar();
+
+}
+
+//Abre a pag de cadastro
+document.getElementById('abrircadastro').addEventListener('click', () => {
+    trocapag();
 });
 
-//quando a conta é criada
-document.getElementById('criadordeconta').addEventListener("submit", (e) => {
+//form de cadastro
+document.getElementById('formCadastro').addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const novoUsuario = {
-        usuario: document.getElementById("usuarioc").value,
-        email: document.getElementById("uemail").value,
-        senha: document.getElementById("senhac").value,
-        senhaconfirm: document.getElementById("senhacconfirm").value
-    };
+    const novoUsuarioI = document.getElementById("usuarioc").value;
+    const novoEmailI = document.getElementById("uemail").value;
+    const novaSenhaI = document.getElementById("senhac").value;
+    const novaConfirmacaoI = document.getElementById("senhacconfirm").value;
 
-    if (novoUsuario.usuario == "") {
+
+    if (novoUsuarioI.trim() == "") {
+        console.log(novoUsuarioI);
         alert("Todos os campos devem ser preencidos");
         document.getElementById("usuarioc").focus();
     }
-    else if (novoUsuario.email == "") {
+    else if (novoEmailI.trim() == "") {
         alert("Todos os campos devem ser preencidos");
         document.getElementById("uemail").focus();
 
     }
-    else if (novoUsuario.senha == "") {
+    else if (novaSenhaI.trim() == "") {
         alert("Todos os campos devem ser preencidos");
         document.getElementById("senhac").focus();
 
     }
-    else if (novoUsuario.senhaconfirm == "") {
+    else if (novaConfirmacaoI.trim() == "") {
         alert("Todos os campos devem ser preencidos");
         document.getElementById("senhacconfirm").focus();
-
     }
     else{
-        //condição de senha errada
-        if (novoUsuario.senha === novoUsuario.senhaconfirm) {
-            usuario.push(novoUsuario); //add ao usuário o perfil escrito
-            alert("Cadastro realizado com sucesso!");
-            
-            document.getElementById('login').classList.toggle('sumir')
-            document.getElementById('criarconta').classList.toggle('sumir')
-        }
-        else{
-            document.getElementById('senhaerrada').classList.toggle('sumir')
-        }
+        if (novaSenhaI === novaConfirmacaoI) {
+            const novoUsuario = {
+                usuario: novoUsuarioI.trim(),
+                email: novoEmailI.trim(),    
+                senha: novaSenhaI.trim()     
+            };
 
+            const usuarioExistente = usuarios.find((u) => u.usuario === novoUsuario.usuario);
+
+            if(usuarioExistente) {
+                alert("Este usuário já existe");
+            }
+            else{
+                usuarios.push(novoUsuario);
+                salvarUsuarios();
+                alert("Cadastro realizado com sucesso!");
+                trocapag();
+            }            
+        }
+        //condição de senha errada
+        else{
+            document.getElementById('senhaerrada').classList.remove('sumir'); // Mostra a mensagem de erro
+            setTimeout(() => {
+                document.getElementById('senhaerrada').classList.add('sumir');
+            }, 6000); // Esconde a mensagem após 3 segundos
+        }
     }
+})
+
+//Abre pag de login
+document.getElementById('fechacadastro').addEventListener('click', () => {
+    trocapag();
 });
 
+
 //quando clica o botao de login
-document.getElementById('logador').addEventListener("submit", (e) => {
+document.getElementById('formLogin').addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const usuariologin = document.getElementById("usuariol").value;
-    const senhalogin = document.getElementById("senhal").value;
+    const usuariologinValor = document.getElementById('usuariol').value.trim();
+    const senhaloginValor = document.getElementById('senhal').value.trim();
 
-    const usuario_Valido = usuario.find((u) => u.usuario === usuariologin && u.senha === senhalogin);
-    console.log(usuario_Valido)
+    const usuarioValido = usuarios.find((u) => u.usuario === usuariologinValor && u.senha === senhaloginValor);
+    console.log(usuarioValido);
 
-    if(usuario_Valido){
+    
+    if(usuarioValido){
         alert("Acesso autorizado!");
         window.location.href = "index.html";
         
     }
-    else{
-        document.getElementById("usuariol").value = "";
-        document.getElementById("senhal").value = "";
+    else {
         document.getElementById("usuariol").focus();
-        document.getElementById('loginerrado').classList.toggle('sumir');
+        document.getElementById('loginerrado').classList.remove('sumir'); // Mostra a mensagem de erro
+        setTimeout(() => {
+            document.getElementById('loginerrado').classList.add('sumir');
+        }, 6000); // Esconde a mensagem após 3 segundos
     }
 
 })
