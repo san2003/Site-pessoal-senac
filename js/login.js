@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //funções
 function apagar(){
-    console.log("fui rodado apagar")
     //tela login
     document.getElementById("usuariol").value = "";
     document.getElementById("senhal").value = "";
@@ -29,7 +28,6 @@ function apagar(){
 }
 
 function trocapag(){
-    console.log("fui rodado trocapag")
     document.getElementById('login').classList.toggle('sumir');
     document.getElementById('criarconta').classList.toggle('sumir');
     apagar();
@@ -37,9 +35,9 @@ function trocapag(){
 }
 
 //Abre a pag de cadastro
-document.getElementById('abrircadastro').addEventListener('click', () => {
-    trocapag();
-});
+document.getElementById('abrircadastro').addEventListener('click', trocapag);
+//Abre pag de login
+document.getElementById('fechacadastro').addEventListener('click', trocapag);
 
 //form de cadastro
 document.getElementById('formCadastro').addEventListener('submit', (e) => {
@@ -52,7 +50,6 @@ document.getElementById('formCadastro').addEventListener('submit', (e) => {
 
 
     if (novoUsuarioI.trim() == "") {
-        console.log(novoUsuarioI);
         alert("Todos os campos devem ser preencidos");
         document.getElementById("usuarioc").focus();
     }
@@ -100,10 +97,6 @@ document.getElementById('formCadastro').addEventListener('submit', (e) => {
     }
 })
 
-//Abre pag de login
-document.getElementById('fechacadastro').addEventListener('click', () => {
-    trocapag();
-});
 
 
 //quando clica o botao de login
@@ -131,4 +124,7 @@ document.getElementById('formLogin').addEventListener("submit", (e) => {
     }
 
 })
+
+
+
 
