@@ -108,3 +108,39 @@ section img{
     object-position: center;
 }
 
+@media (max-width: 1000px) {
+    section img{
+        display: none;
+    }
+    h1{
+        font-size: calc(7vw + 20px); /*15*/
+        margin-bottom: 2vh;
+    }
+    .containerlogin{
+        margin-left: 7.5vw; 
+        width: 85vw;
+    }
+    .containerlogin form{
+        width: 100%;
+    }
+    .containerlogin input{
+        font-size: calc(1vw + 15px); /*4.5*/
+    }
+    .containerlogin label{
+        margin-top: 2vh;
+        font-size: calc(2vw + 15px); /*5.5*/
+    }
+    .containerlogin button{
+        font-weight: 600;
+        height: 6.5vh;
+        width: 60vw;
+        font-size: calc(1.5vw + 15px); /*5*/
+    }
+    .containerlogin a{
+        font-size: calc(1.2vw + 13px); /*4*/
+    }
+    .containerlogin p{
+        font-size: calc(1.5vw + 10px); /*4*/
+
+    }
+}

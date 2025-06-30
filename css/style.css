@@ -40,7 +40,7 @@ PALETA*/
 
 /*NAVBAR*/
 nav{
-    background-color: #120d31;
+    background-color: var(--cor-azul-menu);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +48,7 @@ nav{
     gap:12px
 }
 nav a{
-    color: #fbfef9;
+    color: var(--cor-branco);
     text-decoration: none;
     font-size: 17px;
     font-weight: 600;
@@ -57,7 +57,7 @@ nav a{
     transition: 0.5s;
 }
 nav a:hover {
-    color: #c9cbc7;
+    color: var(--cor-branco-ativo);
     text-decoration: none;
     transition: 0.5s;
 }
@@ -82,8 +82,8 @@ nav img{
 nav button{
     background-color: transparent;
     border-radius: 7.5px;
-    color: #C5172E;
-    border-color: #C5172E;
+    color: var(--cor-vermelho);
+    border-color: var(--cor-vermelho);
 }
 
 
@@ -91,7 +91,7 @@ nav button{
 
 
 .menu_ativo{
-    color: #c9cbc7;
+    color: var(--cor-branco-ativo);
     text-decoration: none;
 }
 
@@ -116,7 +116,7 @@ nav button{
     }
     .drop{
         list-style: none;
-        color: #120d31;
+        color: var(--cor-azul-menu);
         /*display: none; /*faz com que suma*/
     }
 }
@@ -128,9 +128,9 @@ nav button{
 footer{
     margin-top: 10vh;
     height: 10vh;
-    background-color: #120d31;
-    color: #C9CBC7;
-    font-size: larger;
+    background-color: var(--cor-azul-menu);
+    color: var(--cor-branco-ativo);
+    font-size: calc(10px + 1vw);
     display: flex;
     justify-content: center;
     align-items: center;
