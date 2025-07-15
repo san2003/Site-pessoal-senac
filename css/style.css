@@ -10,130 +10,123 @@ Azul menu: #120D31
 PALETA*/
 
 :root {
-    --cor-vermelho: #C5172E;
-    --cor-branco: #FBFEF9;
-    --cor-branco-ativo: #C9CBC7;
-    --cor-azul-claro: #568EA3;
-    --cor-azul-acinzentado: #302F4D;
-    --cor-azul-menu: #120D31;
-  }
+  --cor-vermelho: #c5172e;
+  --cor-branco: #fbfef9;
+  --cor-branco-ativo: #c9cbc7;
+  --cor-azul-claro: #568ea3;
+  --cor-azul-acinzentado: #302f4d;
+  --cor-azul-menu: #120d31;
+}
 
-  @font-face {
-    font-family: 'megazine'; /* Escolha um nome para sua fonte */
-    src: 
-        url('/Site-pessoal-senac-main/megazine-poster/MegazinePosterDEMO-Regular.ttf') format('truetype'); /* Formato TTF para compatibilidade */
-    font-weight: normal; /* Ou bold, light, etc., dependendo da sua fonte */
-    font-style: normal;  /* Ou italic, oblique, etc. */
-    /* Outras propriedades opcionais: */
-    /* font-display: swap; */ /* Melhora o carregamento da fonte */
-  }
+@font-face {
+  font-family: "megazine"; /* Escolha um nome para sua fonte */
+  src: url("/Site-pessoal-senac-main/megazine-poster/MegazinePosterDEMO-Regular.ttf")
+    format("truetype"); /* Formato TTF para compatibilidade */
+  font-weight: normal; /* Ou bold, light, etc., dependendo da sua fonte */
+  font-style: normal; /* Ou italic, oblique, etc. */
+  /* Outras propriedades opcionais: */
+  /* font-display: swap; */ /* Melhora o carregamento da fonte */
+}
 
 /*TUDO*/
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /*TUDO*/
 
 /*NAVBAR*/
-nav{
-    background-color: var(--cor-azul-menu);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2vh;
-    gap:12px
+nav {
+  background-color: var(--cor-azul-menu);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh;
+  gap: 12px;
 }
-nav a{
-    color: var(--cor-branco);
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    margin-top: 2vh;
-    margin-right: 4vh;
-    transition: 0.5s;
+nav a {
+  color: var(--cor-branco);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 2vh;
+  margin-right: 4vh;
+  transition: 0.5s;
 }
 nav a:hover {
-    color: var(--cor-branco-ativo);
-    text-decoration: none;
-    transition: 0.5s;
+  color: var(--cor-branco-ativo);
+  text-decoration: none;
+  transition: 0.5s;
 }
-.menunav{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 5vh;
-    justify-content: center;
-    margin-top: 2vh;
+.menunav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 5vh;
+  justify-content: center;
+  margin-top: 2vh;
 }
-nav img{
-    margin-left: 3vh;
-    width: 8vh;
-    height: auto;
-}
-
-
-
-
-
-nav button{
-    background-color: transparent;
-    border-radius: 7.5px;
-    color: var(--cor-vermelho);
-    border-color: var(--cor-vermelho);
+nav img {
+  margin-left: 3vh;
+  width: 8vh;
+  height: auto;
 }
 
-
-
-
-
-.menu_ativo{
-    color: var(--cor-branco-ativo);
-    text-decoration: none;
+nav button {
+  background-color: transparent;
+  border-radius: 7.5px;
+  color: var(--cor-vermelho);
+  border-color: var(--cor-vermelho);
 }
 
-.container_dropdown{
-    display: none;
-    flex-direction: column;
+.menu_ativo {
+  color: var(--cor-branco-ativo);
+  text-decoration: none;
+}
+
+.container_dropdown {
+  display: none;
+  flex-direction: column;
 }
 
 /*RESPONSIVO*/
 @media (max-width: 800px) {
-    nav{
-        padding: 2.5vw 8vw;
-    }
-    .menunav {
-        display: none;
-    }
-    .loginbtn {
-        display: none;
-    }
-    .container_dropdown{
-        display: flex;
-    }
-    .drop{
-        list-style: none;
-        color: var(--cor-azul-menu);
-        /*display: none; /*faz com que suma*/
-    }
+  nav {
+    padding: 2.5vw 8vw;
+  }
+  .menunav {
+    display: none;
+  }
+  .loginbtn {
+    display: none;
+  }
+  .container_dropdown {
+    display: flex;
+  }
+  .drop {
+    list-style: none;
+    color: var(--cor-azul-menu);
+    /*display: none; /*faz com que suma*/
+  }
 }
 /*RESPONSIVO*/
 
 /*NAVBAR*/
 
 /*FOOTER*/
-footer{
-    margin-top: 10vh;
-    height: 10vh;
-    background-color: var(--cor-azul-menu);
-    color: var(--cor-branco-ativo);
-    font-size: calc(10px + 1vw);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2vh;
+footer {
+  margin-top: 10vh;
+  height: 10vh;
+  background-color: var(--cor-azul-menu);
+  color: var(--cor-branco-ativo);
+  font-size: calc(10px + 1vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
 }
 /*FOOTER*/

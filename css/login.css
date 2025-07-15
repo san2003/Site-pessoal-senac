@@ -1,146 +1,142 @@
 :root {
-    --cor-vermelho: #C5172E;
-    --cor-vermelhoEscurecido: #aa1428;
-    --cor-branco: #FBFEF9;
-    --cor-branco-ativo: #C9CBC7;
-    --cor-azul-claro: #568EA3;
-    --cor-azul-acinzentado: #302F4D;
-    --cor-azul-menu: #120D31;
-  }
-body{
-    background-color: var(--cor-branco);
+  --cor-vermelho: #c5172e;
+  --cor-vermelhoEscurecido: #aa1428;
+  --cor-branco: #fbfef9;
+  --cor-branco-ativo: #c9cbc7;
+  --cor-azul-claro: #568ea3;
+  --cor-azul-acinzentado: #302f4d;
+  --cor-azul-menu: #120d31;
+}
+body {
+  background-color: var(--cor-branco);
 }
 
-h1{
-    margin-left: -2vw;
-    font-size: 3.5vw;
-    font-weight: 700;
+h1 {
+  margin-left: -2vw;
+  font-size: 3.5vw;
+  font-weight: 700;
 }
 
-.containerlogin{
-    background-color: var(--cor-branco);
-    align-content: center;
-    width: 50vw;
-    height: 100vh;
+.containerlogin {
+  background-color: var(--cor-branco);
+  align-content: center;
+  width: 50vw;
+  height: 100vh;
 }
-.containerlogin form{
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    justify-content: center;
-    width: 30vw;
-    height: 100vh;
-
+.containerlogin form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  width: 30vw;
+  height: 100vh;
 }
-.containerlogin label{
-    margin-left: 0.3vw;
-    margin-top: 1.5vh;
-    font-size: 1.5vw;
+.containerlogin label {
+  margin-left: 0.3vw;
+  margin-top: 1.5vh;
+  font-size: 1.5vw;
 }
-.containerlogin input{
-    margin-top: 3px;
-    border-radius: 3px;
-    background-color: #00000010;
-    font-size: 1vw;
-    font-weight: 500;
-    border: none; /* Remove todas as bordas primeiro, se houver */
-    border-bottom: 2px solid var(--cor-azul-menu); /* Borda inferior: 2px de espessura, sólida, azul */
-    padding: 8px 0; /* Ajuste o padding conforme necessário, 0 nas laterais para a borda ficar mais "limpa" */
-    outline: none; /* Remove o contorno azul/preto que aparece ao focar no input */
-    height: 6vh;
-    width: 100%; /* Exemplo: input ocupa 100% da largura do contêiner */
-    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
-
-  }
-
-  .containerlogin button{
-    margin-top: 5vh;
-    height: 5vh;
-    width: 10vw;
-    font-weight: 700;
-    font-size: calc(0.7vw + 5px);
-    align-self: center;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--cor-azul-menu);
-    color: var(--cor-branco);
-    cursor: pointer;
-  }
-  
-  .containerlogin p{
-    color: var(--cor-vermelho);
-    font-size: calc(5px + 0.7vw);
-    font-weight: 500;
-}
-  .containerlogin a{
-    margin-top: 0.5vh;
-    font-size: calc(5px + 0.7vw);
-    font-weight: 500;
-    font-weight: 600;  
-    color: var(--cor-vermelho);
-    cursor: pointer;
-    text-decoration: none;
-    align-self: center;
-}
-.containerlogin p{
-    align-self: center;
-
+.containerlogin input {
+  margin-top: 3px;
+  border-radius: 3px;
+  background-color: #00000010;
+  font-size: 1vw;
+  font-weight: 500;
+  border: none; /* Remove todas as bordas primeiro, se houver */
+  border-bottom: 2px solid var(--cor-azul-menu); /* Borda inferior: 2px de espessura, sólida, azul */
+  padding: 8px 0; /* Ajuste o padding conforme necessário, 0 nas laterais para a borda ficar mais "limpa" */
+  outline: none; /* Remove o contorno azul/preto que aparece ao focar no input */
+  height: 6vh;
+  width: 100%; /* Exemplo: input ocupa 100% da largura do contêiner */
+  box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
 }
 
-.containerlogin a:hover{
-    transition: 1500ms;
-    color: var(--cor-vermelhoEscurecido);
+.containerlogin button {
+  margin-top: 5vh;
+  height: 5vh;
+  width: 10vw;
+  font-weight: 700;
+  font-size: calc(0.7vw + 5px);
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--cor-azul-menu);
+  color: var(--cor-branco);
+  cursor: pointer;
 }
 
-.sumir{
-    display: none;
+.containerlogin p {
+  color: var(--cor-vermelho);
+  font-size: calc(5px + 0.7vw);
+  font-weight: 500;
+}
+.containerlogin a {
+  margin-top: 0.5vh;
+  font-size: calc(5px + 0.7vw);
+  font-weight: 500;
+  font-weight: 600;
+  color: var(--cor-vermelho);
+  cursor: pointer;
+  text-decoration: none;
+  align-self: center;
+}
+.containerlogin p {
+  align-self: center;
 }
 
-.logineimg{
-    display: flex;
-    flex-direction: row;
+.containerlogin a:hover {
+  transition: 1500ms;
+  color: var(--cor-vermelhoEscurecido);
 }
-section img{
-    width: 50vw;
-    height: 100vh;
-    
-    object-fit:cover;
-    object-position: center;
+
+.sumir {
+  display: none;
+}
+
+.logineimg {
+  display: flex;
+  flex-direction: row;
+}
+section img {
+  width: 50vw;
+  height: 100vh;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 1000px) {
-    section img{
-        display: none;
-    }
-    h1{
-        font-size: calc(7vw + 20px); /*15*/
-        margin-bottom: 2vh;
-    }
-    .containerlogin{
-        margin-left: 7.5vw; 
-        width: 85vw;
-    }
-    .containerlogin form{
-        width: 100%;
-    }
-    .containerlogin input{
-        font-size: calc(1vw + 15px); /*4.5*/
-    }
-    .containerlogin label{
-        margin-top: 2vh;
-        font-size: calc(2vw + 15px); /*5.5*/
-    }
-    .containerlogin button{
-        font-weight: 600;
-        height: 6.5vh;
-        width: 60vw;
-        font-size: calc(1.5vw + 15px); /*5*/
-    }
-    .containerlogin a{
-        font-size: calc(1.2vw + 13px); /*4*/
-    }
-    .containerlogin p{
-        font-size: calc(1.5vw + 10px); /*4*/
-
-    }
+  section img {
+    display: none;
+  }
+  h1 {
+    font-size: calc(7vw + 20px); /*15*/
+    margin-bottom: 2vh;
+  }
+  .containerlogin {
+    margin-left: 7.5vw;
+    width: 85vw;
+  }
+  .containerlogin form {
+    width: 100%;
+  }
+  .containerlogin input {
+    font-size: calc(1vw + 15px); /*4.5*/
+  }
+  .containerlogin label {
+    margin-top: 2vh;
+    font-size: calc(2vw + 15px); /*5.5*/
+  }
+  .containerlogin button {
+    font-weight: 600;
+    height: 6.5vh;
+    width: 60vw;
+    font-size: calc(1.5vw + 15px); /*5*/
+  }
+  .containerlogin a {
+    font-size: calc(1.2vw + 13px); /*4*/
+  }
+  .containerlogin p {
+    font-size: calc(1.5vw + 10px); /*4*/
+  }
 }
