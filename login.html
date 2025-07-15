@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <link rel="shortcut icon" href="img/logo.png" />
-</head>
-<body>
-    <header>
-    </header>
+  </head>
+  <body>
+    <header></header>
     <section class="logineimg">
       <div class="containerlogin">
-        <section id="login"class="">
+        <section id="login" class="">
           <form id="formLogin">
-          <h1 id="">Login</h1>
-          <p id="loginerrado" class="sumir">Usuário ou senha incorretos!</p>
+            <h1 id="">Login</h1>
+            <p id="loginerrado" class="sumir">Usuário ou senha incorretos!</p>
             <label>Usuário:</label>
-            <input type="text" id="usuariol" placeholder=" Seu usuário">
+            <input type="text" id="usuariol" placeholder=" Seu usuário" />
             <label>Senha:</label>
-            <input type="password" id="senhal" placeholder="  Senha">
+            <input type="password" id="senhal" placeholder="  Senha" />
             <button type="submit" id="logar">Login</button>
-            <a id="abrircadastro" style="margin-top: 2vh;">Ainda não sou cadastrado.</a>
+            <a id="abrircadastro" style="margin-top: 2vh"
+              >Ainda não sou cadastrado.</a
+            >
             <a href="index.html"> Voltar para home.</a>
           </form>
         </section>
-    
-    
+
         <section id="criarconta" class="sumir">
           <form id="formCadastro">
             <h1>Cadastre-se</h1>
-            <p id="errosenha" style="margin-top: 3vh;"  class="sumir"> textotextotexto</p>
+            <p id="errosenha" style="margin-top: 3vh" class="sumir">
+              textotextotexto
+            </p>
             <label>Usuário:</label>
-            <input type="text" id="usuarioc" placeholder=" Seu usuário">
+            <input type="text" id="usuarioc" placeholder=" Seu usuário" />
             <label>Email:</label>
-            <input type="email" id="uemail" placeholder=" seu@gmail.com">
+            <input type="email" id="uemail" placeholder=" seu@gmail.com" />
             <label>Senha:</label>
-            <input type="password" id="senhac" placeholder=" Senha">
+            <input type="password" id="senhac" placeholder=" Senha" />
             <label>Confirmar senha:</label>
-            <input type="password" id="senhacconfirm" placeholder=" Senha">
-            
-            <p id="senhaerrada" style="margin-top: 3vh;" class="sumir">As senhas não coincidem</p>
+            <input type="password" id="senhacconfirm" placeholder=" Senha" />
+
+            <p id="senhaerrada" style="margin-top: 3vh" class="sumir">
+              As senhas não coincidem
+            </p>
             <button id="cadastrar" type="submit">Criar uma conta</button>
-            <a id="fechacadastro" style="margin-top: 2vh;">Já tenho uma conta.</a>
+            <a id="fechacadastro" style="margin-top: 2vh"
+              >Já tenho uma conta.</a
+            >
             <a href="index.html"> Voltar para home.</a>
           </form>
         </section>
       </div>
-      <img src="../Site-pessoal-senac-main/img/EPI0890-2-scaled.webp" alt="">
+      <img src="../Site-pessoal-senac-main/img/EPI0890-2-scaled.webp" alt="" />
     </section>
 
     <script src="js/login.js"></script>
-    </body>
+  </body>
 </html>
